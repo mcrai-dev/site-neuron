@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuron - AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+<!-- Effets de brillance -->
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+
+<!-- Container Three.js -->
+<div id="container"></div>
+
+<!-- Header -->
+<header class="header">
+<div class="nav-container">
+    <a href="#" class="logo">Neuron.</a>
+    <nav class="nav-links">
+        <a href="#accueil" class="nav-link active">Accueil</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">À propos</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+</div>
+</header>
+
+<!-- Contenu Principal -->
+<main class="main-content">
+<!-- Section Hero -->
+<section id="accueil" class="section">
+    <div class="hero-content">
+        <div class="hero-text scroll-reveal">
+            <h1 class="hero-title">
+                Transforming your business 
+                <span style="font-size: 0.5em; display: block; margin-top: 0.5rem">
+                    with intelligence technology
+                </span>
+            </h1>
+            <p class="hero-subtitle">
+                Votre partenaire de confiance pour la transformation digitale de votre entreprise.
+                <br>Nos solutions d'intelligence technologie sur mesure vous permettent de tirer le meilleur parti de votre activité.
+            </p>
+            <div class="button-group">
+                <a href="#contact" class="button button-primary">
+                    Comprendre de votre besoins
+                    <i class="lucide-arrow-right"></i>
+                </a>
+                <a href="#services" class="button button-secondary" >
+                    En savoir plus
+                </a>
+            </div>
+        </div>
+        <div class="hero-illustration scroll-reveal">
+            <div class="floating-card card-1">
+                <img src="img/desktop.png" style="height: 50vh" alt="Illustration 1">
+            </div>
+            <div class="floating-card card-2">
+                <p style="color: rgba(0, 1, 83, 0.9);"> Hello, would you like to learn more about our services?</p>
+                <img src="img/bot.png "style="width:5%;" alt="Illustration 2">
+            </div>
+            <!--<div class="floating-card card-3">
+                <img src="/api/placeholder/100/100" alt="Illustration 3">
+            </div> -->
+        </div>
+    </div>
+</section>
+<!-- Ajoutez ceci juste après la fermeture de votre section hero -->
+<div class="chat-overlay" id="chatOverlay">
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="chat-title">
+                    <h3>Assistant Neuron</h3>
+                    <span class="chat-status">En ligne</span>
+                </div>
+            </div>
+            <div class="chat-actions">
+                <button class="chat-action-btn" id="minimizeChat">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button class="chat-action-btn" id="closeChat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        Bonjour! Je suis l'assistant Neuron. Comment puis-je vous aider aujourd'hui?
+                    </div>
+                    <div class="message-time">À l'instant</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <div class="suggested-questions">
+                <button class="suggestion-btn">Services IA</button>
+                <button class="suggestion-btn">Tarification</button>
+                <button class="suggestion-btn">Rendez-vous</button>
+            </div>
+            <form id="chatForm" class="chat-form">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    placeholder="Tapez votre message..."
+                    autocomplete="off"
+                >
+                <button type="submit" class="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Section Services -->
+<section id="services" class="section">
+    <div class="services-container">
+        <div class="services-intro scroll-reveal">
+            <h2 class="section-title">Nos Services</h2>
+            <p class="services-subtitle" style="color: rgba(0, 1, 83, 0.9);">
+                Des solutions innovantes alimentées par l'intelligence artificielle 
+                pour transformer votre entreprise
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Ajout de la nouvelle carte dans la grille de services -->
+            <div class="service-card scroll-reveal">
+                <div class="service-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3 class="service-title">Site Web & Solutions d'Entreprise</h3>
+                <p class="service-description">
+                    <b>Développement de sites web professionnels et solutions de gestion 
+                        d'entreprise sur mesure (CMS, ERP).</b>
+                </p>
+                <ul class="service-features">
+                    <li>
+                        <i class="fas fa-browser"></i>
+                        Sites Web Dynamiques et E-commerce
+                    </li>
+                    <li>
+                        <i class="fas fa-newspaper"></i>
+                        CMS sur mesure (Gestion de contenu)
+                    </li>
+                    <li>
+                        <i class="fas fa-building-user"></i>
+                        ERP & Solutions métiers
+                    </li>
+                </ul>
+                <a href="#contact" class="service-link">
+                    En savoir plus <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+
+
+            <!-- Custom App Development Card -->
+            <div class="service-card scroll-reveal">
+               <div class="service-icon">
+                   <i class="fas fa-mobile-alt"></i>
+               </div>
+               <h3 class="service-title">Applications Web/mobile Sur Mesure</h3>
+               <p class="service-description">
+                   <b>Développement d'applications web et mobiles personnalisées 
+                       intégrant les dernières technologies.</b>
+               </p>
+               <ul class="service-features">
+                   <li>
+                       <i class="fas fa-desktop"></i>
+                       Applications web responsive
+                   </li>
+                   <li>
+                       <i class="fas fa-mobile"></i>
+                       Applications mobiles natives
+                   </li>
+                   <li>
+                       <i class="fas fa-cloud"></i>
+                       Intégration IA & Cloud
+                   </li>
+               </ul>
+               <a href="#contact" class="service-link">
+                   En savoir plus <i class="fas fa-arrow-right"></i>
+               </a>
+           </div>
+       
+           <!-- Computer Vision Card -->
+           <div class="service-card scroll-reveal">
+               <div class="service-icon">
+                   <i class="fas fa-eye"></i>
+               </div>
+               <h3 class="service-title">Computer Vision</h3>
+               <p class="service-description">
+                   <b>Solutions avancées de vision par ordinateur pour automatiser 
+                       et optimiser vos processus visuels.</b>
+               </p>
+               <ul class="service-features">
+                   <li>
+                       <i class="fas fa-camera"></i>
+                       Reconnaissance d'objets et de formes
+                   </li>
+                   <li>
+                       <i class="fas fa-stream"></i>
+                       Analyse d'images en temps réel
+                   </li>
+                   <li>
+                       <i class="fas fa-video"></i>
+                       Traitement vidéo intelligent
+                   </li>
+               </ul>
+               <a href="#contact" class="service-link">
+                   En savoir plus <i class="fas fa-arrow-right"></i>
+               </a>
+           </div>
+       
+           <!-- Virtual Assistant Card -->
+           <div class="service-card scroll-reveal">
+               <div class="service-icon">
+                   <i class="fas fa-robot"></i>
+               </div>
+               <h3 class="service-title">Assistant Virtuel IA</h3>
+               <p class="service-description">
+                   <b>Bots intelligents personnalisés pour automatiser vos interactions 
+                       et améliorer l'expérience client.</b>
+               </p>
+               <ul class="service-features">
+                   <li>
+                       <i class="fas fa-comments"></i>
+                       Chatbots sur mesure
+                   </li>
+                   <li>
+                       <i class="fas fa-language"></i>
+                       Traitement du langage naturel
+                   </li>
+                   <li>
+                       <i class="fas fa-network-wired"></i>
+                       Intégration multi-plateforme
+                   </li>
+               </ul>
+               <a href="#contact" class="service-link">
+                   En savoir plus <i class="fas fa-arrow-right"></i>
+               </a>
+           </div>
+       
+           <!-- Expert System Card -->
+           <div class="service-card scroll-reveal">
+               <div class="service-icon">
+                   <i class="fas fa-brain"></i>
+               </div>
+               <h3 class="service-title">Système Expert</h3>
+               <p class="service-description">
+                   <b>Systèmes d'aide à la décision basés sur l'IA pour optimiser 
+                       vos processus métier.</b>
+               </p>
+               <ul class="service-features">
+                   <li>
+                       <i class="fas fa-chart-line"></i>
+                       Analyse prédictive
+                   </li>
+                   <li>
+                       <i class="fas fa-cogs"></i>
+                       Automatisation des décisions
+                   </li>
+                   <li>
+                       <i class="fas fa-arrow-trend-up"></i>
+                       Optimisation des processus
+                   </li>
+               </ul>
+               <a href="#contact" class="service-link">
+                   En savoir plus <i class="fas fa-arrow-right"></i>
+               </a>
+           </div>
+       
+          
+           <!-- Data Science Card -->
+           <div class="service-card scroll-reveal">
+               <div class="service-icon">
+                   <i class="fas fa-database"></i>
+               </div>
+               <h3 class="service-title">Data Science</h3>
+               <p class="service-description">
+                  <b>Exploitation et analyse avancée de données pour des insights 
+                   stratégiques pertinents.</b>
+               </p>
+               <ul class="service-features">
+                   <li>
+                       <i class="fas fa-server"></i>
+                       Analyse de données massives
+                   </li>
+                   <li>
+                       <i class="fas fa-microchip"></i>
+                       Machine Learning
+                   </li>
+                   <li>
+                       <i class="fas fa-chart-bar"></i>
+                       Visualisation de données
+                   </li>
+               </ul>
+               <a href="#contact" class="service-link">
+                   En savoir plus <i class="fas fa-arrow-right"></i>
+               </a>
+           </div>
+       </div>
+    </div>
+</section>
+
+<!-- Section À propos -->
+<section id="about" class="section">
+    <div class="about-container">
+        <div class="about-content-wrapper scroll-reveal">
+            <div class="about-image-container">
+                <div class="image-overlay"></div>
+                <img src="img/image.jpg" alt="L'équipe Neuron en action" class="main-image">
+                <div class="floating-card">
+                    <i class="fas fa-award"></i>
+                    <span>Leader en IA</span>
+                </div>
+            </div>
+
+            <div class="about-content scroll-reveal">
+                <span class="about-subtitle">Notre Histoire</span>
+                <h2 class="about-title">Façonnons Ensemble l'Avenir Digital</h2>
+                
+                <p class="about-text" >
+                    Depuis 2020, Neuron redéfinit les standards de l'innovation technologique à Madagascar. 
+                    Notre expertise en intelligence artificielle, développement web et solutions d'entreprise 
+                    nous permet d'accompagner les organisations dans leur transformation digitale.
+                </p>
+
+                <div class="about-features">
+                    <div class="feature-item">
+                        <i class="fas fa-robot"></i>
+                        <div class="feature-content">
+                            <h3>Excellence Technologique</h3>
+                            <p>Expertise pointue en IA, vision par ordinateur et développement web</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake"></i>
+                        <div class="feature-content">
+                            <h3>Approche Partenaire</h3>
+                            <p>Accompagnement personnalisé et solutions sur mesure</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-rocket"></i>
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Projets Réalisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-smile"></i>
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Satisfaction Client</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Experts Tech</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support Tech</span>
+                    </div>
+                </div>
+
+                <a href="#contact" class="about-cta">
+                    Discutons de votre projet
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section Contact -->
+<section id="contact" class="section">
+    <div class="contact-container scroll-reveal">
+        <div class="contact-header">
+            <span class="contact-subtitle">Parlons de votre projet</span>
+            <h2 class="section-title">Commençons une collaboration</h2>
+            <p class="contact-description">
+                Notre équipe est prête à vous accompagner dans vos projets. 
+                Contactez-nous pour échanger sur vos besoins.
+            </p>
+        </div>
+
+        <div class="contact-wrapper">
+            <!-- Informations de contact -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Notre Adresse</h3>
+                        <p>Antananarivo, Madagascar</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <a href="mailto:contact@neuron.mg">contact@neuron.mg</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Téléphone</h3>
+                        <a href="tel:+261340000000">+261 34 00 000 00</a>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formulaire de contact -->
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-header">
+                        <h3>Envoyez-nous un message</h3>
+                        <p>Nous vous répondrons dans les plus brefs délais</p>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="name">
+                                <i class="fas fa-user"></i>
+                                Nom complet
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                class="form-input" 
+                                required
+                                placeholder="Votre nom"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">
+                                <i class="fas fa-envelope"></i>
+                                Email
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="form-input" 
+                                required
+                                placeholder="votre@email.com"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="subject">
+                            <i class="fas fa-tag"></i>
+                            Sujet
+                        </label>
+                        <select id="subject" class="form-input" required>
+                            <option value="" disabled selected>Sélectionnez un sujet</option>
+                            <option value="devis">Demande de devis</option>
+                            <option value="project">Nouveau projet</option>
+                            <option value="partnership">Partenariat</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="message">
+                            <i class="fas fa-comment-alt"></i>
+                            Message
+                        </label>
+                        <textarea 
+                            id="message" 
+                            class="form-input" 
+                            required
+                            placeholder="Décrivez votre projet ou votre demande..."
+                            rows="5"
+                        ></textarea>
+                    </div>
+
+                    <!-- À ajouter juste avant le bouton submit dans le formulaire -->
+<div class="gdpr-section">
+    <div class="gdpr-consent">
+        <div class="gdpr-header">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Protection de vos données</h4>
+        </div>
+        
+        <div class="gdpr-content">
+            <div class="form-group checkbox-group">
+                <input 
+                    type="checkbox" 
+                    id="gdpr-consent" 
+                    class="gdpr-checkbox" 
+                    required
+                >
+                <label for="gdpr-consent" class="gdpr-label">
+                    J'accepte que mes données soient traitées dans le cadre de ma demande de contact *
+                </label>
+            </div>
+            
+            <div class="gdpr-details">
+                <p>
+                    En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées 
+                    dans le cadre de ma demande et de la relation commerciale qui peut en découler.
+                </p>
+                
+                <div class="gdpr-info">
+                    <p>
+                        Conformément au RGPD, vous bénéficiez des droits suivants :
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Droit d'accès et de rectification de vos données
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Droit à l'effacement de vos données
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Droit à la portabilité de vos données
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Droit d'opposition au traitement
+                        </li>
+                    </ul>
+                    
+                    <p>
+                        Pour exercer ces droits ou pour toute question sur le traitement de vos données, 
+                        vous pouvez nous contacter à 
+                        <a href="mailto:privacy@neuron.mg" class="gdpr-link">privacy@neuron.mg</a>
+                    </p>
+                </div>
+                
+                <button type="button" class="gdpr-details-toggle">
+                    <span class="toggle-text">Voir plus de détails</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <button type="submit" class="button button-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Envoyer le message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- Ajoutez ce code juste avant la fermeture du body -->
+<div id="floatingChatButton" class="floating-chat-button">
+    <div class="chat-bubble">
+        <i class="fas fa-comment-dots"></i>
+        <span class="notification-badge">1</span>
+    </div>
+    <div class="chat-tooltip">
+        Besoin d'aide ? Discutons !
+        <div class="tooltip-arrow"></div>
+    </div>
+</div>
+
+
+<!-- Scroll Indicator -->
+<div class="scroll-indicator">
+<div class="scroll-dot" data-section="accueil"></div>
+<div class="scroll-dot" data-section="services"></div>
+<div class="scroll-dot" data-section="about"></div>
+<div class="scroll-dot" data-section="contact"></div>
+</div>
+
+<!-- Ajoutez ce footer avant la fermeture du body -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <!-- Colonne Marque -->
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">Neuron.</a>
+                <p class="footer-description">
+                    Leader dans le développement de solutions IA innovantes 
+                    et le développement d'applications sur mesure pour 
+                    transformer votre entreprise.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/neuron-mg" 
+                       target="_blank" 
+                       class="social-link" 
+                       aria-label="LinkedIn">
+                        <i class="lucide-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/neuron-mg" 
+                       target="_blank" 
+                       class="social-link" 
+                       aria-label="GitHub">
+                        <i class="lucide-github"></i>
+                    </a>
+                    <a href="https://twitter.com/neuron_mg" 
+                       target="_blank" 
+                       class="social-link" 
+                       aria-label="Twitter">
+                        <i class="lucide-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Colonne Services -->
+            <div class="footer-col">
+                <h3 class="footer-title">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#services" class="footer-link">Computer Vision</a></li>
+                    <li><a href="#services" class="footer-link">Assistant Virtuel IA</a></li>
+                    <li><a href="#services" class="footer-link">Système Expert</a></li>
+                    <li><a href="#services" class="footer-link">Applications Sur Mesure</a></li>
+                    <li><a href="#services" class="footer-link">Data Science</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne Entreprise -->
+            <div class="footer-col">
+                <h3 class="footer-title">Entreprise</h3>
+                <ul class="footer-links">
+                    <li><a href="#about" class="footer-link">À propos</a></li>
+                    <li><a href="#contact" class="footer-link">Nous contacter</a></li>
+                    <li><a href="#" class="footer-link">Carrières</a></li>
+                    <li><a href="#" class="footer-link">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne Contact -->
+            <div class="footer-col">
+                <h3 class="footer-title">Contact</h3>
+                <div class="footer-contact-info">
+                    <i class="lucide-mail"></i>
+                    <a href="mailto:contact@neuron.mg" class="footer-link">
+                        contact@neuron.mg
+                    </a>
+                </div>
+                <div class="footer-contact-info">
+                    <i class="lucide-map-pin"></i>
+                    <span>Antananarivo, Madagascar</span>
+                </div>
+                <div class="footer-contact-info">
+                    <i class="lucide-phone"></i>
+                    <a href="tel:+261340000000" class="footer-link">
+                        +261 34 00 000 00
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>
+                © 2024 Neuron. Tous droits réservés. 
+                <a href="#">Politique de confidentialité</a> | 
+                <a href="#">Conditions d'utilisation</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+
+
+    </script>
+    <script src="script/script-ai.js"></script>
+    <script type="module">
+        import { ChatSystem } from './js/ChatSystem.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                window.chatSystem = new ChatSystem();
+            } catch (error) {
+                console.error('Error initializing chat system:', error);
+            }
+        });
+    </script>
+</body>
+</html>
